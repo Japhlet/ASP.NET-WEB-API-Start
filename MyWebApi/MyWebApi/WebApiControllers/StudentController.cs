@@ -125,5 +125,31 @@ namespace MyWebApi.WebApiControllers
             }
             return Ok();
         }
+
+        public IHttpActionResult Put(StudentVM studentVM)
+        {
+            if (!ModelState.IsValid)
+            {
+                return BadRequest("Not a valid model");
+            }
+
+            using(var db = new Db())
+            {
+                var existingRecord = db.Student.Where(s => s.studentId == studentVM.studentId).FirstOrDefault<Student>();
+
+                if(existingRecord !=null)
+                {
+                    existingRecord.firstName = studentVM.firstName;
+                    existingRecord.lastName = studentVM.lastName;
+
+                    db.SaveChanges();
+                }
+                else
+                {
+                    return NotFound();
+                }
+            }
+            return Ok();
+        }
     }
 }
