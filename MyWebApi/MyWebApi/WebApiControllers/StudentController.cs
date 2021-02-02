@@ -151,5 +151,21 @@ namespace MyWebApi.WebApiControllers
             }
             return Ok();
         }
+
+        public IHttpActionResult Delete(int id)
+        {
+            if (id <= 0)
+                return BadRequest("Not a valid studentId");
+
+            using(var db = new Db())
+            {
+                var recordToDelete = db.Student.Where(s => s.studentId == id).FirstOrDefault();
+
+                db.Entry(recordToDelete).State = System.Data.Entity.EntityState.Deleted;
+
+                db.SaveChanges();
+            }
+            return Ok();
+        }
     }
 }
