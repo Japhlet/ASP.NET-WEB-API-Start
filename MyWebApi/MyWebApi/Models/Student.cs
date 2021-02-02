@@ -14,11 +14,21 @@ namespace MyWebApi.Models
     
     public partial class Student
     {
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
+        public Student()
+        {
+            this.StudentAddress = new HashSet<StudentAddress>();
+        }
+    
         public int studentId { get; set; }
         public string firstName { get; set; }
         public string lastName { get; set; }
         public Nullable<int> standardId { get; set; }
+        public Nullable<int> courseId { get; set; }
     
+        public virtual Course Course { get; set; }
         public virtual Standard Standard { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<StudentAddress> StudentAddress { get; set; }
     }
 }

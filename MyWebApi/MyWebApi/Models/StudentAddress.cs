@@ -23,5 +23,6 @@ namespace MyWebApi.Models
     
         public virtual City City { get; set; }
         public virtual State State { get; set; }
+        public virtual Student Student { get; set; }
     }
 }

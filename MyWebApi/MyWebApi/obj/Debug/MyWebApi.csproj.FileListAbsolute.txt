@@ -1,3 +1,4 @@
+D:\DEV\DEVELOPMENT\C#\ASP.NET Web API\MyWebAPI\MyWebApi\MyWebApi\obj\Debug\MyWebApi.csproj.CoreCompileInputs.cache
 D:\DEV\DEVELOPMENT\C#\ASP.NET Web API\MyWebAPI\MyWebApi\MyWebApi\bin\MyWebApi.dll.config
 D:\DEV\DEVELOPMENT\C#\ASP.NET Web API\MyWebAPI\MyWebApi\MyWebApi\bin\MyWebApi.dll
 D:\DEV\DEVELOPMENT\C#\ASP.NET Web API\MyWebAPI\MyWebApi\MyWebApi\bin\MyWebApi.pdb
@@ -51,6 +52,8 @@ D:\DEV\DEVELOPMENT\C#\ASP.NET Web API\MyWebAPI\MyWebApi\MyWebApi\bin\roslyn\vbc.
 D:\DEV\DEVELOPMENT\C#\ASP.NET Web API\MyWebAPI\MyWebApi\MyWebApi\bin\roslyn\VBCSCompiler.exe
 D:\DEV\DEVELOPMENT\C#\ASP.NET Web API\MyWebAPI\MyWebApi\MyWebApi\bin\roslyn\VBCSCompiler.exe.config
 D:\DEV\DEVELOPMENT\C#\ASP.NET Web API\MyWebAPI\MyWebApi\MyWebApi\bin\Antlr3.Runtime.dll
+D:\DEV\DEVELOPMENT\C#\ASP.NET Web API\MyWebAPI\MyWebApi\MyWebApi\bin\EntityFramework.dll
+D:\DEV\DEVELOPMENT\C#\ASP.NET Web API\MyWebAPI\MyWebApi\MyWebApi\bin\EntityFramework.SqlServer.dll
 D:\DEV\DEVELOPMENT\C#\ASP.NET Web API\MyWebAPI\MyWebApi\MyWebApi\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
 D:\DEV\DEVELOPMENT\C#\ASP.NET Web API\MyWebAPI\MyWebApi\MyWebApi\bin\Microsoft.Web.Infrastructure.dll
 D:\DEV\DEVELOPMENT\C#\ASP.NET Web API\MyWebAPI\MyWebApi\MyWebApi\bin\Newtonsoft.Json.dll
@@ -65,6 +68,8 @@ D:\DEV\DEVELOPMENT\C#\ASP.NET Web API\MyWebAPI\MyWebApi\MyWebApi\bin\System.Web.
 D:\DEV\DEVELOPMENT\C#\ASP.NET Web API\MyWebAPI\MyWebApi\MyWebApi\bin\System.Web.WebPages.dll
 D:\DEV\DEVELOPMENT\C#\ASP.NET Web API\MyWebAPI\MyWebApi\MyWebApi\bin\System.Web.WebPages.Razor.dll
 D:\DEV\DEVELOPMENT\C#\ASP.NET Web API\MyWebAPI\MyWebApi\MyWebApi\bin\WebGrease.dll
+D:\DEV\DEVELOPMENT\C#\ASP.NET Web API\MyWebAPI\MyWebApi\MyWebApi\bin\EntityFramework.xml
+D:\DEV\DEVELOPMENT\C#\ASP.NET Web API\MyWebAPI\MyWebApi\MyWebApi\bin\EntityFramework.SqlServer.xml
 D:\DEV\DEVELOPMENT\C#\ASP.NET Web API\MyWebAPI\MyWebApi\MyWebApi\bin\Newtonsoft.Json.xml
 D:\DEV\DEVELOPMENT\C#\ASP.NET Web API\MyWebAPI\MyWebApi\MyWebApi\bin\System.Net.Http.Formatting.xml
 D:\DEV\DEVELOPMENT\C#\ASP.NET Web API\MyWebAPI\MyWebApi\MyWebApi\bin\System.Web.Helpers.xml
@@ -79,7 +84,6 @@ D:\DEV\DEVELOPMENT\C#\ASP.NET Web API\MyWebAPI\MyWebApi\MyWebApi\bin\System.Web.
 D:\DEV\DEVELOPMENT\C#\ASP.NET Web API\MyWebAPI\MyWebApi\MyWebApi\bin\Antlr3.Runtime.pdb
 D:\DEV\DEVELOPMENT\C#\ASP.NET Web API\MyWebAPI\MyWebApi\MyWebApi\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
 D:\DEV\DEVELOPMENT\C#\ASP.NET Web API\MyWebAPI\MyWebApi\MyWebApi\obj\Debug\MyWebApi.csprojAssemblyReference.cache
-D:\DEV\DEVELOPMENT\C#\ASP.NET Web API\MyWebAPI\MyWebApi\MyWebApi\obj\Debug\MyWebApi.csproj.CoreCompileInputs.cache
 D:\DEV\DEVELOPMENT\C#\ASP.NET Web API\MyWebAPI\MyWebApi\MyWebApi\obj\Debug\MyWebApi.csproj.CopyComplete
 D:\DEV\DEVELOPMENT\C#\ASP.NET Web API\MyWebAPI\MyWebApi\MyWebApi\obj\Debug\MyWebApi.dll
 D:\DEV\DEVELOPMENT\C#\ASP.NET Web API\MyWebAPI\MyWebApi\MyWebApi\obj\Debug\MyWebApi.pdb

@@ -12,7 +12,7 @@ namespace MyWebApi.ViewModel
         public string lastName { get; set; }
         public Nullable<int> standardId { get; set; }
 
-        public StudentAddressVM studentAddressVM { get; set; }
-        public StandardVM standardVM { get; set; }
+        public StudentAddressVM studentAddress { get; set; }
+        public StandardVM standard { get; set; }
     }
 }

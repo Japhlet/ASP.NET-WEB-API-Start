@@ -45,6 +45,7 @@
           <Property Name="firstName" Type="nvarchar" MaxLength="20" />
           <Property Name="lastName" Type="nvarchar" MaxLength="20" />
           <Property Name="standardId" Type="int" />
+          <Property Name="courseId" Type="int" />
         </EntityType>
         <EntityType Name="StudentAddress">
           <Key>
@@ -90,6 +91,18 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <Association Name="FK_Student_Course">
+          <End Role="Course" Type="Self.Course" Multiplicity="0..1" />
+          <End Role="Student" Type="Self.Student" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Course">
+              <PropertyRef Name="courseId" />
+            </Principal>
+            <Dependent Role="Student">
+              <PropertyRef Name="courseId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
         <Association Name="FK_Student_Standard">
           <End Role="Standard" Type="Self.Standard" Multiplicity="0..1" />
           <End Role="Student" Type="Self.Student" Multiplicity="*" />
@@ -126,6 +139,18 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <Association Name="FK_StudentAddress_Student">
+          <End Role="Student" Type="Self.Student" Multiplicity="0..1" />
+          <End Role="StudentAddress" Type="Self.StudentAddress" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Student">
+              <PropertyRef Name="studentId" />
+            </Principal>
+            <Dependent Role="StudentAddress">
+              <PropertyRef Name="studentId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
         <Association Name="FK_Teacher_Standard">
           <End Role="Standard" Type="Self.Standard" Multiplicity="0..1" />
           <End Role="Teacher" Type="Self.Teacher" Multiplicity="*" />
@@ -154,6 +179,10 @@
             <End Role="City" EntitySet="City" />
             <End Role="State" EntitySet="State" />
           </AssociationSet>
+          <AssociationSet Name="FK_Student_Course" Association="Self.FK_Student_Course">
+            <End Role="Course" EntitySet="Course" />
+            <End Role="Student" EntitySet="Student" />
+          </AssociationSet>
           <AssociationSet Name="FK_Student_Standard" Association="Self.FK_Student_Standard">
             <End Role="Standard" EntitySet="Standard" />
             <End Role="Student" EntitySet="Student" />
@@ -164,6 +193,10 @@
           </AssociationSet>
           <AssociationSet Name="FK_StudentAddress_State" Association="Self.FK_StudentAddress_State">
             <End Role="State" EntitySet="State" />
+            <End Role="StudentAddress" EntitySet="StudentAddress" />
+          </AssociationSet>
+          <AssociationSet Name="FK_StudentAddress_Student" Association="Self.FK_StudentAddress_Student">
+            <End Role="Student" EntitySet="Student" />
             <End Role="StudentAddress" EntitySet="StudentAddress" />
           </AssociationSet>
           <AssociationSet Name="FK_Teacher_Standard" Association="Self.FK_Teacher_Standard">
@@ -194,6 +227,7 @@
           <Property Name="location" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
           <Property Name="teacherId" Type="Int32" />
           <NavigationProperty Name="Teacher" Relationship="Self.FK_Course_Teacher" FromRole="Course" ToRole="Teacher" />
+          <NavigationProperty Name="Student" Relationship="Self.FK_Student_Course" FromRole="Course" ToRole="Student" />
         </EntityType>
         <EntityType Name="Standard">
           <Key>
@@ -223,7 +257,10 @@
           <Property Name="firstName" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
           <Property Name="lastName" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
           <Property Name="standardId" Type="Int32" />
+          <Property Name="courseId" Type="Int32" />
+          <NavigationProperty Name="Course" Relationship="Self.FK_Student_Course" FromRole="Student" ToRole="Course" />
           <NavigationProperty Name="Standard" Relationship="Self.FK_Student_Standard" FromRole="Student" ToRole="Standard" />
+          <NavigationProperty Name="StudentAddress" Relationship="Self.FK_StudentAddress_Student" FromRole="Student" ToRole="StudentAddress" />
         </EntityType>
         <EntityType Name="StudentAddress">
           <Key>
@@ -237,6 +274,7 @@
           <Property Name="stateId" Type="Int32" />
           <NavigationProperty Name="City" Relationship="Self.FK_StudentAddress_City" FromRole="StudentAddress" ToRole="City" />
           <NavigationProperty Name="State" Relationship="Self.FK_StudentAddress_State" FromRole="StudentAddress" ToRole="State" />
+          <NavigationProperty Name="Student" Relationship="Self.FK_StudentAddress_Student" FromRole="StudentAddress" ToRole="Student" />
         </EntityType>
         <EntityType Name="Teacher">
           <Key>
@@ -285,6 +323,18 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <Association Name="FK_Student_Course">
+          <End Role="Course" Type="Self.Course" Multiplicity="0..1" />
+          <End Role="Student" Type="Self.Student" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Course">
+              <PropertyRef Name="courseId" />
+            </Principal>
+            <Dependent Role="Student">
+              <PropertyRef Name="courseId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
         <Association Name="FK_Student_Standard">
           <End Role="Standard" Type="Self.Standard" Multiplicity="0..1" />
           <End Role="Student" Type="Self.Student" Multiplicity="*" />
@@ -321,6 +371,18 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <Association Name="FK_StudentAddress_Student">
+          <End Role="Student" Type="Self.Student" Multiplicity="0..1" />
+          <End Role="StudentAddress" Type="Self.StudentAddress" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Student">
+              <PropertyRef Name="studentId" />
+            </Principal>
+            <Dependent Role="StudentAddress">
+              <PropertyRef Name="studentId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
         <EntityContainer Name="Db" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="City" EntityType="Self.City" />
           <EntitySet Name="Course" EntityType="Self.Course" />
@@ -341,6 +403,10 @@
             <End Role="Teacher" EntitySet="Teacher" />
             <End Role="Course" EntitySet="Course" />
           </AssociationSet>
+          <AssociationSet Name="FK_Student_Course" Association="Self.FK_Student_Course">
+            <End Role="Course" EntitySet="Course" />
+            <End Role="Student" EntitySet="Student" />
+          </AssociationSet>
           <AssociationSet Name="FK_Student_Standard" Association="Self.FK_Student_Standard">
             <End Role="Standard" EntitySet="Standard" />
             <End Role="Student" EntitySet="Student" />
@@ -351,6 +417,10 @@
           </AssociationSet>
           <AssociationSet Name="FK_StudentAddress_State" Association="Self.FK_StudentAddress_State">
             <End Role="State" EntitySet="State" />
+            <End Role="StudentAddress" EntitySet="StudentAddress" />
+          </AssociationSet>
+          <AssociationSet Name="FK_StudentAddress_Student" Association="Self.FK_StudentAddress_Student">
+            <End Role="Student" EntitySet="Student" />
             <End Role="StudentAddress" EntitySet="StudentAddress" />
           </AssociationSet>
         </EntityContainer>
@@ -403,6 +473,7 @@
                 <ScalarProperty Name="firstName" ColumnName="firstName" />
                 <ScalarProperty Name="lastName" ColumnName="lastName" />
                 <ScalarProperty Name="standardId" ColumnName="standardId" />
+                <ScalarProperty Name="courseId" ColumnName="courseId" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
