@@ -31,7 +31,6 @@ namespace MyWebApi.WebApiControllers
             {
                 return NotFound();
             }
-
             return Ok(students);
         }
 
@@ -55,7 +54,6 @@ namespace MyWebApi.WebApiControllers
             {
                 return NotFound();
             }
-
             return Ok(student);
         }
 
@@ -79,7 +77,6 @@ namespace MyWebApi.WebApiControllers
             {
                 return NotFound();
             }
-
             return Ok(students);
         }
 
@@ -108,8 +105,25 @@ namespace MyWebApi.WebApiControllers
             {
                 return NotFound();
             }
-
             return Ok(students);
+        }
+
+        public IHttpActionResult PostNewStudent(StudentVM studentVM)
+        {
+            if (!ModelState.IsValid)
+                return BadRequest("Invalid data");
+
+            using(var db = new Db())
+            {
+                db.Student.Add(new Student()
+                {                    
+                    firstName = studentVM.firstName,
+                    lastName = studentVM.lastName
+                });
+
+                db.SaveChanges();
+            }
+            return Ok();
         }
     }
 }
