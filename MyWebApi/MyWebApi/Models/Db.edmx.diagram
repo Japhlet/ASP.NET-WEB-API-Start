@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="b897526a6522439f8af519b28838bad5" Name="Diagram1">
+        <EntityTypeShape EntityType="webapischooldbModel.City" Width="1.5" PointX="0.75" PointY="7.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="webapischooldbModel.Course" Width="1.5" PointX="5.25" PointY="3.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="webapischooldbModel.Standard" Width="1.5" PointX="0.75" PointY="2.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="webapischooldbModel.State" Width="1.5" PointX="3" PointY="7.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="webapischooldbModel.Student" Width="1.5" PointX="3" PointY="1.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="webapischooldbModel.StudentAddress" Width="1.5" PointX="5.25" PointY="7" IsExpanded="true" />
+        <EntityTypeShape EntityType="webapischooldbModel.Teacher" Width="1.5" PointX="3" PointY="3.75" IsExpanded="true" />
+        <AssociationConnector Association="webapischooldbModel.FK_State_City" ManuallyRouted="false" />
+        <AssociationConnector Association="webapischooldbModel.FK_StudentAddress_City" ManuallyRouted="false" />
+        <AssociationConnector Association="webapischooldbModel.FK_Course_Teacher" ManuallyRouted="false" />
+        <AssociationConnector Association="webapischooldbModel.FK_Student_Standard" ManuallyRouted="false" />
+        <AssociationConnector Association="webapischooldbModel.FK_Teacher_Standard" ManuallyRouted="false" />
+        <AssociationConnector Association="webapischooldbModel.FK_StudentAddress_State" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
